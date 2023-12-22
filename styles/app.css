@@ -1,0 +1,23 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    padding-top: 65px;
+}
+
+img {
+    height: 40px;
+    width: 40px;
+    text-align: center;
+}
+.tool-features {
+    height: 35vh;
+    overflow-y: scroll;
+}
+
+.tool-reasons {
+    height: 35vh;
+    overflow-y: scroll;
+}

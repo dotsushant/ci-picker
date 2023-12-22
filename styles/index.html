@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" ng-app="ciApp">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>CI Pickr</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.8.1/css/xeditable.css">
+    <link rel="stylesheet" ng-href="https://bootswatch.com/3/yeti/bootstrap.min.css">
+    <link rel="stylesheet" href="./styles/app.css">
+</head>
+
+<body ng-cloak>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                    aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" ui-sref="dashboard">CI Picker</a>
+            </div>
+        </div>
+    </nav>
+
+    <div ui-view>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-route.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular-sanitize.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.4.2/angular-ui-router.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-xeditable/0.8.1/js/xeditable.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-elastic/2.5.1/elastic.min.js"></script>
+    <script src="https://rawgit.com/kripken/sql.js/master/js/sql.js"></script>
+
+    <script src="./app.js"></script>
+    <script src="./recipes/toolService.js"></script>
+    <script src="./areas/dashboard/dashboardController.js"></script>
+</body>
+
+</html>

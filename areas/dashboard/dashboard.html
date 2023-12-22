@@ -1,0 +1,63 @@
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-xs-12">
+            <input type="text" class="form-control" ng-model="searchText" placeholder="What features are you looking for?">
+            <br>
+        </div>
+    </div>
+    <div class="row">
+        <div ng-repeat="tool in tools">
+            <div class="col-xs-12 col-sm-6 col-lg-3">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <a ng-href={{tool.SiteUrl}}>
+                            <img ng-src={{tool.ImageUrl}} alt="..." class="img-responsive" data-toggle="tooltip" title={{tool.Name}}>
+                        </a>
+                    </div>
+                    <div class="panel-footer">
+                        <b>Salient features</b>
+                    </div>
+                    <div class="panel-body tool-features">
+                        <table class="table table-condensed table-striped table-responsive table-hover">
+                            <tbody>
+                                <tr ng-repeat="feature in tool.features | filter: searchText">
+                                    <td>
+                                        {{feature.Name}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-footer">
+                        <b>Good Bits</b>
+                    </div>
+                    <div class="panel-body tool-reasons">
+                        <table class="table table-condensed table-striped table-responsive table-hover">
+                            <tbody>
+                                <tr ng-repeat="reason in tool.reasonsPositive | filter: searchText">
+                                    <td>
+                                        {{reason.Name}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="panel-footer">
+                        <b>Bad Bits</b>
+                    </div>
+                    <div class="panel-body tool-reasons">
+                        <table class="table table-condensed table-striped table-responsive table-hover">
+                            <tbody>
+                                <tr ng-repeat="reason in tool.reasonsNegative | filter: searchText">
+                                    <td>
+                                        {{reason.Name}}
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
